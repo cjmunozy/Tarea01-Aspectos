@@ -41,8 +41,4 @@ public class ReproductorDeVideo implements ReproductorVideo {
             System.out.println("No hay un video en reproducción para detener.");
         }
     }
-
-    public boolean estaReproduciendoVideo() {
-        return reproduciendo;
-    }
 }

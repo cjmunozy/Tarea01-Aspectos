@@ -41,8 +41,4 @@ public class ReproductorDeMusica implements ReproductorMusica {
             System.out.println("No hay una canción en reproducción para detener.");
         }
     }
-
-    public boolean estaReproduciendo() {
-        return reproduciendo;
-    }
 }

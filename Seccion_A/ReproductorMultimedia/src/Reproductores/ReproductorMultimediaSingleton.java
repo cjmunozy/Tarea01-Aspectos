@@ -1,16 +1,16 @@
 package Reproductores;
 
-public class ReproductorMultimedia {
-    private static ReproductorMultimedia instancia;  // Variable estática para almacenar la instancia única
-    private MediaAdapter mediaAdapter;
+public class ReproductorMultimediaSingleton {
+    private static ReproductorMultimediaSingleton instancia;
+    private MediaAdapter mediaAdapter;  // Adaptador para reproducir medios
 
-    private ReproductorMultimedia() {
+    private ReproductorMultimediaSingleton() {
         mediaAdapter = new MediaAdapter(new ReproductorDeMusica(), new ReproductorDeVideo());
     }
 
-    public static ReproductorMultimedia getInstancia() {
+    public static ReproductorMultimediaSingleton getInstancia() {
         if (instancia == null) {
-            instancia = new ReproductorMultimedia();
+            instancia = new ReproductorMultimediaSingleton();
         }
         return instancia;
     }
@@ -24,12 +24,8 @@ public class ReproductorMultimedia {
     }
 
     public void pausar() {
-        mediaAdapter.pausar();
     }
 
     public void detener() {
-        mediaAdapter.detener();
     }
 }
-
-
